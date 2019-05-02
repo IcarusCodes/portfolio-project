@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.JobsConfig',
     'blog.apps.BlogConfig',
     'resume.apps.ResumeConfig',
+    'projects.apps.ProjectsConfig',
 ]
 
 MIDDLEWARE = [
