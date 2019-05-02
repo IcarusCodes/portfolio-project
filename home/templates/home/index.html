@@ -25,7 +25,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="{% static 'Python_programming.pdf' %}">Resume</a>
+      <a class="nav-item nav-link" href="{% url 'resume_home' %}">Resume</a>
       <a class="nav-item nav-link" href="#">Projects</a>
         <a class="nav-item nav-link" href="#">CTFs</a>
         <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
@@ -36,7 +36,6 @@
 </header>
 
 <main role="main">
-
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi I'm Alex.</h1>
