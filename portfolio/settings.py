@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'resume.apps.ResumeConfig',
     'projects.apps.ProjectsConfig',
+    'ctfs.apps.CtfsConfig',
 ]
 
 MIDDLEWARE = [
