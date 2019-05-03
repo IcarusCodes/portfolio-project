@@ -71,6 +71,7 @@ a {
 .header-content {
     z-index: 2;
     text-align: center;
+    flex: 1;
 }
 
 .header-content h1 {
