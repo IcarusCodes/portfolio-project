@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Alex Stoian{% endblock %}
+
+
+{% block content %}
+
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-1 jumbotron-heading">Hi I'm Alex,</h1>
+            <p class="lead text-muted">and this is my portfolio/blog.</p>
+            <p>
+                <a href="mailto:stoian.alex94@yahoo.com" class="btn btn-primary my-2">Email Me</a>
+            </p>
+            <img class="img-fluid" width="400" height="400" src="{% static 'paramania.JPG' %}"/>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                {% for homeobj in homeobjects.all %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="{{ homeobj.image.url }}"/>
+                            <div class="card-body">
+                                <p class="card-text">{{ homeobj.summary }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

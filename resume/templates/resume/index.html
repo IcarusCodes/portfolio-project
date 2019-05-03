@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Resume{% endblock %}
+
+
+{% block content %}
+
+    <h1>This is a work in progress. Please come back at a later time.</h1>
+
+    <form action="{% static 'Python_programming.pdf' %}">
+        <button class="button">View Printer Friendly PDF</button>
+    </form>
+
+{% endblock %}
