@@ -14,11 +14,19 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">     <!-- Static css -->
+    {% block style %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navigation" class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #212529">
         <a class="navbar-brand" href="{% url 'home' %}">Alex Stoian</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,14 +35,24 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="{% url 'resume_home' %}">Resume</a>
-                <a class="nav-item nav-link" href="{% url 'project' %}">Projects</a>
-                <a class="nav-item nav-link" href={% url 'ctfs' %}#">CTFs</a>
-                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+                <a class="nav-item nav-link mx-1" href="{% url 'home' %}">
+                    <i class="fas fa-home mr-1"></i>HOME</a>
+                <a class="nav-item nav-link mx-1" href="{% url 'resume_home' %}">
+                    <i class="fas fa-list-alt mr-1"></i>RESUME</a>
+                <a class="nav-item nav-link mx-1" href="{% url 'project' %}">
+                    <i class="fas fa-code mr-1"></i>PROJECTS</a>
+                <a class="nav-item nav-link mx-1" href={% url 'ctfs' %}#">
+                    <i class="fas fa-flag mr-1"></i>CTFs</a>
+                <a class="nav-item nav-link mx-1" href="{% url 'allblogs' %}">
+                    <i class="fas fa-comment-alt mr-1"></i>BLOG</a>
             </div>
         </div>
     </nav>
 </header>
+
+    {% block header %}
+    {% endblock %}
+
 
 <div class="wrapper">
     {% block content %}

@@ -3,38 +3,62 @@
 
 {% block title %}Alex Stoian{% endblock %}
 
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block header %}
+    <header class="v-header container">
+        <div class="fullscreen-video">
+            <video autoplay loop="loop"
+                   muted="muted">
+                <source src="{% static "video/parapanta_vid_code.MP4" %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Hello there,</h1>
+            <p>I'm Alex and you've landed on my portfolio site / blog.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-dark mx-1">View blog</a>
+                <a href="#" class="btn btn-primary mx-1">View site</a>
+            </div>
+        </div>
+    </header>
+{% endblock %}
 
 {% block content %}
 
-<main role="main">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-1 jumbotron-heading">Hi I'm Alex,</h1>
-            <p class="lead text-muted">and this is my portfolio/blog.</p>
-            <p>
-                <a href="mailto:stoian.alex94@yahoo.com" class="btn btn-primary my-2">Email Me</a>
-            </p>
-            <img class="img-fluid" width="400" height="400" src="{% static 'paramania.JPG' %}"/>
-        </div>
-    </section>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-1 jumbotron-heading">Hi I'm Alex,</h1>
+                <p class="lead text-muted">and this is my portfolio/blog.</p>
+                <p>
+                    <a href="mailto:stoian.alex94@yahoo.com" class="btn btn-primary my-2">Email Me</a>
+                </p>
+                <img class="img-fluid" width="400" height="400" src="{% static 'images/para2.JPG' %}"/>
+            </div>
+        </section>
 
-    <div class="album py-5 bg-light">
-        <div class="container">
+        <div class="album py-5 bg-light">
+            <div class="container">
 
-            <div class="row">
-                {% for homeobj in homeobjects.all %}
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="{{ homeobj.image.url }}"/>
-                            <div class="card-body">
-                                <p class="card-text">{{ homeobj.summary }}</p>
+                <div class="row">
+                    {% for homeobj in homeobjects.all %}
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="{{ homeobj.image.url }}"/>
+                                <div class="card-body">
+                                    <p class="card-text">{{ homeobj.summary }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
 {% endblock %}
