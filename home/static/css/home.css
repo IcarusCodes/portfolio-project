@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #00FFFF;
+    color: #33cc33;
     font-family: 'Lobster', cursive;
 }
 
@@ -39,8 +39,8 @@ a {
 
 .fullscreen-video {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -86,14 +86,22 @@ a {
 }
 
 .btn {
-    background: #34b3a0;
     color: #fff;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
+    font-size: 2rem;
+    padding: 1rem 1rem;
     text-decoration: none;
+    font-weight: 900;
 }
 
-@media(max-width: 960px) {
+.btn-group {
+    width: 100%;
+}
+
+img {
+    border-radius: 10%;
+}
+
+@media (max-width: 960px) {
     .container {
         padding-right: 2rem;
         padding-left: 2rem;
@@ -101,12 +109,13 @@ a {
 }
 
 @media screen and (max-aspect-ratio: 1920/1080) {
-  .video-container > video {
-    height: 100%;
-  }
+    .video-container > video {
+        height: 100%;
+    }
 }
+
 @media screen and (min-aspect-ratio: 1920/1080) {
-  .video-container > video {
-    width: 100%;
-  }
+    .video-container > video {
+        width: 100%;
+    }
 }

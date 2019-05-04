@@ -19,11 +19,15 @@
         <div class="header-overlay"></div>
         <div class="header-content">
             <h1 class="display-1 jumbotron-heading">Hello there,</h1>
-            <br />
+            <br/>
             <p class="lead">I'm Alex and you've landed on my portfolio site / blog.</p>
-            <div class="btn-group btn-sm">
-                <a href="#" class="btn btn-dark mx-2">View blog</a>
-                <a href="#" class="btn btn-dark mx-2">View site</a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-block btn-outline-success m-3 border rounded-right">
+                    BLOG
+                </button>
+                <button type="button" class="btn btn-block btn-outline-success m-3 border rounded-left">
+                    SITE
+                </button>
             </div>
         </div>
     </header>
@@ -34,6 +38,7 @@
     <main role="main">
         <section class="jumbotron text-center">
             <div class="container">
+                <img src="{% static 'images/alex-circle.png' %}" alt="me" class="w-25">
                 <h1 class="display-1 jumbotron-heading">Hi I'm Alex,</h1>
                 <p class="lead text-muted">and this is my portfolio/blog.</p>
                 <p>
